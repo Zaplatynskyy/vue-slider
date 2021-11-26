@@ -28,10 +28,25 @@ const app = new Vue({
                 image : 'img/05.jpg'
             },
         ],
-        counter : 0,
+
+        counter : 0
     },
     methods : {
-
+        arrowUp : function() {
+            if(this.counter == 0) {
+                this.counter = this.countries.length - 1;
+            } else {
+                this.counter--;
+            }
+            
+        },
+        arrowDown : function() {
+            if(this.counter == this.countries.length - 1) {
+                this.counter = 0;
+            } else {
+                this.counter++;
+            }
+        }
     }
 })
 

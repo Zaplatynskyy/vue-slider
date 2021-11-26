@@ -20,8 +20,8 @@
                     <img :src="country.image" :alt="country.name">
                     
                     <div class="text">
-                        <h2>Svezia</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
+                        <h2>{{country.name}}</h2>
+                        <p>{{country.info}}</p>
                     </div>
                 </div>
 
@@ -30,10 +30,10 @@
             <!-- contenitore immagini piccole -->
             <div class="thumbnails left">
                 <!-- bottoni freccia su e giù -->
-                <div class="btn up">
+                <div class="btn up" @click="arrowUp()">
                     <i class="fas fa-chevron-up"></i>
                 </div>
-                <div class="btn down">
+                <div class="btn down" @click="arrowDown()">
                     <i class="fas fa-chevron-down"></i>
                 </div>
 
