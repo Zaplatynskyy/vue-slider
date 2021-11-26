@@ -1,32 +1,38 @@
-const countries = [
-    {
-        name : 'Svezia',
-        info : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-        image : 'img/01.jpg'
+const app = new Vue({
+    el : '#root',
+    data : {
+        countries : [
+            {
+                name : 'Svezia',
+                info : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+                image : 'img/01.jpg'
+            },
+            {
+                name : 'Svizzera',
+                info : 'Lorem ipsum',
+                image : 'img/02.jpg'
+            },
+            {
+                name : 'Gran Bretagna',
+                info : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+                image : 'img/03.jpg'
+            },
+            {
+                name : 'Germania',
+                info : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                image : 'img/04.jpg'
+            },
+            {
+                name : 'Paradise',
+                info : 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                image : 'img/05.jpg'
+            },
+        ]
     },
-    {
-        name : 'Svizzera',
-        info : 'Lorem ipsum',
-        image : 'img/02.jpg'
-    },
-    {
-        name : 'Gran Bretagna',
-        info : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-        image : 'img/03.jpg'
-    },
-    {
-        name : 'Germania',
-        info : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-        image : 'img/04.jpg'
-    },
-    {
-        name : 'Paradise',
-        info : 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-        image : 'img/05.jpg'
-    },
-];
+    methods : {
 
-console.log(countries);
+    }
+})
 
 
 
