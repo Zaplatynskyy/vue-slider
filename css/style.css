@@ -1,0 +1,128 @@
+/* ******COMMONS****** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/******* sezione SLIDER *******/
+.slider {
+    width: 70%;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* sezione SLIDER di SINISTRA con immagine grande */
+.main_images {
+    width: 80%;
+    height: 100%;
+}
+
+.main_img {
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.main_img.active {
+    display: block;
+}
+
+.text {
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    text-align: right;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+.text p {
+    font-size: 20px;
+}
+
+/* sezione SLIDER di DESTRA con le immagini piccole */
+.thumbnails {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+}
+
+.thumbnail {
+    height: calc(100% / 5);
+    opacity: .5;
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border: 3px solid #cccccc;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 32px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.btn:active {
+    background-color: #e4e4e4;
+}
+
+.btn.up {
+    top: 10px;
+}
+
+.btn.down {
+    bottom: 10px;
+}
+
+/* x il layover opacity, cambiando anche la proprietà dell'active */
+/* .layover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+} */
