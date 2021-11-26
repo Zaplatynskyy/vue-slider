@@ -27,7 +27,8 @@ const app = new Vue({
                 info : 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
                 image : 'img/05.jpg'
             },
-        ]
+        ],
+        counter : 0,
     },
     methods : {
 

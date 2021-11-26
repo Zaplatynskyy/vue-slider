@@ -15,14 +15,16 @@
         <div class="slider clearfix">
             <!-- contenitore immagine grande -->
             <div class="main_images left">
-                <div class="main_img active">
-                    <img src="img/01.jpg" alt="">
+
+                <div class="main_img"  v-for="(country, i) in countries" :class="i == counter ? 'active' : ''" >
+                    <img :src="country.image" :alt="country.name">
                     
                     <div class="text">
                         <h2>Svezia</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
                     </div>
                 </div>
+
             </div> 
 
             <!-- contenitore immagini piccole -->
@@ -35,8 +37,8 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
 
-                <div class="thumbnail">
-                    <img src="img/01.jpg" alt="">
+                <div class="thumbnail" v-for="(country, i) in countries" :class="i == counter ? 'active' : ''">
+                    <img v-bind:src="country.image" :alt="country.name">
                 </div>
 
             </div>
