@@ -12,7 +12,7 @@
     <div id="root" class="container">
 
         <!-- contenitore slider -->
-        <div class="slider clearfix">
+        <div class="slider clearfix" @mouseover="blockAutoplay()" @mouseleave="autoDown()">
             <!-- contenitore immagine grande -->
             <div class="main_images left">
 

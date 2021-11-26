@@ -52,10 +52,15 @@ const app = new Vue({
             }
 
         },
+        // funzione per autoscorrimento immagini ogni 3 secondi
         autoDown : function() {
             this.autoPlay = setInterval(function () {
                 app.arrowDown();
             }, 3000);
+        },
+        // funzione blocco autoscorrimento immagini
+        blockAutoplay : function() {
+            clearInterval(this.autoPlay);
         },
         // funzione che cambia immagine al click sull'immagine piccola di riferimento
         selectThis : function(i) {
