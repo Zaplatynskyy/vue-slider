@@ -16,9 +16,12 @@
             <!-- contenitore immagine grande -->
             <div class="main_images left">
 
+                <!-- contenitore immagine grande di sinistra -->
                 <div class="main_img">
+                    <!-- immagine inserita tramite Vue -->
                     <img :src="countries[counter].image" :alt="countries[counter].name">
                     
+                    <!-- testo inserito tramite Vue -->
                     <div class="text">
                         <h2>{{countries[counter].name}}</h2>
                         <p>{{countries[counter].info}}</p>
@@ -29,7 +32,7 @@
 
             <!-- contenitore immagini piccole -->
             <div class="thumbnails left">
-                <!-- bottoni freccia su e giù -->
+                <!-- bottoni freccia su e giù ai quali è agganciato un evento click con una funzione -->
                 <div class="btn up" @click="arrowUp()">
                     <i class="fas fa-chevron-up"></i>
                 </div>
@@ -37,7 +40,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
 
-                <div class="thumbnail" v-for="(country, i) in countries" :class="i == counter ? 'active' : ''">
+                <!-- contenitore immagine ciclato e stampato secondo il numero degli elementi nel mio array -->
+                <div class="thumbnail" v-for="(country, i) in countries" :class="i == counter ? 'active' : ''" @click ="selectThis(i)">
+                    <!-- immagine thumb inserita tramite Vue -->
                     <img v-bind:src="country.image" :alt="country.name">
                 </div>
 

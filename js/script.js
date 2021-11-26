@@ -1,6 +1,7 @@
 const app = new Vue({
     el : '#root',
     data : {
+        // array di nazioni da stampare
         countries : [
             {
                 name : 'Svezia',
@@ -28,10 +29,11 @@ const app = new Vue({
                 image : 'img/05.jpg'
             },
         ],
-
+        // contatore che indica la posizione in array della nazione in evidenza
         counter : 0
     },
     methods : {
+        // funzione che permette di far scorrere le immagini verso l'alto
         arrowUp : function() {
             if(this.counter == 0) {
                 this.counter = this.countries.length - 1;
@@ -40,12 +42,17 @@ const app = new Vue({
             }
             
         },
+        // funzione che permette di far scorrere le immagini verso il basso
         arrowDown : function() {
             if(this.counter == this.countries.length - 1) {
                 this.counter = 0;
             } else {
                 this.counter++;
             }
+        },
+        // funzione che cambia immagine al click sull'immagine piccola di riferimento
+        selectThis : function(i) {
+            this.counter = i;
         }
     }
 })
