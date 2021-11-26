@@ -54,9 +54,8 @@ const app = new Vue({
         },
         // funzione per autoscorrimento immagini ogni 3 secondi
         autoDown : function() {
-            this.autoPlay = setInterval(function () {
-                app.arrowDown();
-            }, 3000);
+            const app = this;
+            this.autoPlay = setInterval(app.arrowDown, 3000);
         },
         // funzione blocco autoscorrimento immagini
         blockAutoplay : function() {
@@ -67,10 +66,10 @@ const app = new Vue({
             this.counter = i;
         }
     },
+
     created: function() {
         this.autoDown();
     }
-    
 })
 
 
