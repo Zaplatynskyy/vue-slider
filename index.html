@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- contenitore immagine ciclato e stampato secondo il numero degli elementi nel mio array -->
-                <div class="thumbnail" v-for="(country, i) in countries" :class="i == counter ? 'active' : ''" @click ="selectThis(i)">
+                <div class="thumbnail" v-for="(country, i) in countries" :class="i == counter ? 'active' : ''" @click ="selectThis(i)" >
                     <!-- immagine thumb inserita tramite Vue -->
                     <img v-bind:src="country.image" :alt="country.name">
                 </div>

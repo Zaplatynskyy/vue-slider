@@ -30,7 +30,8 @@ const app = new Vue({
             },
         ],
         // contatore che indica la posizione in array della nazione in evidenza
-        counter : 0
+        counter : 0,
+        autoPlay : ''
     },
     methods : {
         // funzione che permette di far scorrere le immagini verso l'alto
@@ -49,12 +50,22 @@ const app = new Vue({
             } else {
                 this.counter++;
             }
+
+        },
+        autoDown : function() {
+            this.autoPlay = setInterval(function () {
+                app.arrowDown();
+            }, 3000);
         },
         // funzione che cambia immagine al click sull'immagine piccola di riferimento
         selectThis : function(i) {
             this.counter = i;
         }
+    },
+    created: function() {
+        this.autoDown();
     }
+    
 })
 
 
