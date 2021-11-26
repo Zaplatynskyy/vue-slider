@@ -16,12 +16,12 @@
             <!-- contenitore immagine grande -->
             <div class="main_images left">
 
-                <div class="main_img"  v-for="(country, i) in countries" :class="i == counter ? 'active' : ''" >
-                    <img :src="country.image" :alt="country.name">
+                <div class="main_img">
+                    <img :src="countries[counter].image" :alt="countries[counter].name">
                     
                     <div class="text">
-                        <h2>{{country.name}}</h2>
-                        <p>{{country.info}}</p>
+                        <h2>{{countries[counter].name}}</h2>
+                        <p>{{countries[counter].info}}</p>
                     </div>
                 </div>
 
